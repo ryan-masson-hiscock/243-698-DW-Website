@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--The main landing page for my Webpage!-->
+<html>
+    <head>
+        <title>Ryan Masson Hiscock's Final Project</title>
+    </head>
+    <body>
+        <h1>Important Information:</h1>
+        <p>This website serves as a point to control certain aspects of the Autonomous Tool Cart aswell as to provide documentation and support.</br></br>This website fulfills the requirements of Dawson College's Electronics Engineering Technology Computer Networks Project course 243-698-DW</p>
+       
+        <h2>Website Redirects</h2>
+        <p>To see the "About This Project" section, <a href="about.html">Click here!</a></p> <!--Lead the user to the FAQ-->
+        <p>To see this project's documentation, <a href="documentation.html">Click here!</a></p> <!--Lead the user to the FAQ-->    
+        <h3>Listed below are some of the things I would like to focus on for this webpage.</h3>
+        <div style=background-color:#312c2c> <!--Create a light grey background color over the list-->
+            <ul>
+                <li>Autonomous Cart Control</li> 
+                <li>Autonomous Cart Documentation</li>
+                <li>About the Autonomous Cart</li>
+            </ul>
+        </div>
+            <h2>Autonomous Cart Controls</h2>
+            <p id="cartState" onload="readCart()">The cart is currently: </p>
+        </body>
+
+        <script>
+            function readCart() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("cartState").innerHTML = this.responseText;
+                }
+                xhttp.open("GET", "readcartval.php");
+                xhttp.send();
+            }
+            </script>
+    </body>
+</html>
