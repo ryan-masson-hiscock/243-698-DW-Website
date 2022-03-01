@@ -25,6 +25,7 @@
         </body>
 
         <script>
+            setInterval(readCart, 60000);
             function readCart() {
                 const xhttp = new XMLHttpRequest();
                 xhttp.onload = function() {
@@ -32,7 +33,6 @@
                 }
                 xhttp.open("GET", "readcartval.php");
                 xhttp.send();
-                setInterval(readCart, 60000);
             }
         </script>
     </body>
