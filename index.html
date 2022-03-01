@@ -20,11 +20,12 @@
             </ul>
         </div>
             <h2>Autonomous Cart Controls</h2>
+            <button type="button" onclick="readCart()">Click to read the status value</button>
             <p id="cartState" onload="readCart()" onclick="readCart()">The cart is currently: </p>
         </body>
 
         <script>
-            function readVal() {
+            function readCart() {
                 const xhttp = new XMLHttpRequest();
                 xhttp.onload = function() {
                     document.getElementById("cartState").innerHTML = this.responseText;
