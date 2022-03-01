@@ -4,7 +4,7 @@
     <head>
         <title>Ryan Masson Hiscock's Final Project</title>
     </head>
-    <body>
+    <body onload="readCart()" >
         <h1>Important Information:</h1>
         <p>This website serves as a point to control certain aspects of the Autonomous Tool Cart aswell as to provide documentation and support.</br></br>This website fulfills the requirements of Dawson College's Electronics Engineering Technology Computer Networks Project course 243-698-DW</p>
        
@@ -20,7 +20,7 @@
             </ul>
         </div>
             <h2>Autonomous Cart Controls</h2>
-            <button type="button" onload="readCart()" onclick="readCart()">Click to read the status value</button>
+            <button type="button" onclick="readCart()">Click to read the status value</button>
             <p id="cartState">The cart is currently: </p>
         </body>
 
