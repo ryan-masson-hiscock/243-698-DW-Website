@@ -20,7 +20,7 @@
             </ul>
         </div>
             <h2>Autonomous Cart Controls</h2>
-            <p id="cartState" onload="readCart()">The cart is currently: </p>
+            <p id="cartState" onload="readCart()" onclick="readCart()">The cart is currently: </p>
         </body>
 
         <script>
@@ -32,6 +32,6 @@
                 xhttp.open("GET", "readcartval.php");
                 xhttp.send();
             }
-            </script>
+        </script>
     </body>
 </html>
