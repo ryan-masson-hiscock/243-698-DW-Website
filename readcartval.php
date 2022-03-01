@@ -2,6 +2,9 @@
 <html>
 <?php
     $logic = `gpio read 27`;
-    echo "The cart is currently = $logic";
+    if($logic = "1")
+        echo "The motors are currently stopped"
+    else
+        echo "The motors are currently running"
 ?>
 </html>
